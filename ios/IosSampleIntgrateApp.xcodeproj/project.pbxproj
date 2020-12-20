@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		330EE03B246A80B100FDD10B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330EE039246A80B100FDD10B /* Main.storyboard */; };
 		330EE03D246A80B300FDD10B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330EE03C246A80B300FDD10B /* Assets.xcassets */; };
 		330EE040246A80B300FDD10B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330EE03E246A80B300FDD10B /* LaunchScreen.storyboard */; };
+		330EE049246AE2FC00FDD10B /* EventSenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 330EE048246AE2FC00FDD10B /* EventSenderManager.m */; };
 		9072B42A29F7E206E3FB08F1 /* Pods_IosSampleIntgrateApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A5254E19CFABDFFAFCCD30 /* Pods_IosSampleIntgrateApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,9 @@
 		330EE03C246A80B300FDD10B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		330EE03F246A80B300FDD10B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		330EE041246A80B300FDD10B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		330EE047246AE2FC00FDD10B /* IosSampleIntgrateApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IosSampleIntgrateApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		330EE048246AE2FC00FDD10B /* EventSenderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventSenderManager.m; sourceTree = "<group>"; };
+		330EE04A246AE31200FDD10B /* EventSenderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventSenderManager.h; sourceTree = "<group>"; };
 		3875291D57EBEC698787D258 /* Pods-IosSampleIntgrateApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosSampleIntgrateApp.release.xcconfig"; path = "Target Support Files/Pods-IosSampleIntgrateApp/Pods-IosSampleIntgrateApp.release.xcconfig"; sourceTree = "<group>"; };
 		67A5254E19CFABDFFAFCCD30 /* Pods_IosSampleIntgrateApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosSampleIntgrateApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1CAB8CC117111FCD3EF7F1 /* Pods-IosSampleIntgrateApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosSampleIntgrateApp.debug.xcconfig"; path = "Target Support Files/Pods-IosSampleIntgrateApp/Pods-IosSampleIntgrateApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +74,9 @@
 				330EE03C246A80B300FDD10B /* Assets.xcassets */,
 				330EE03E246A80B300FDD10B /* LaunchScreen.storyboard */,
 				330EE041246A80B300FDD10B /* Info.plist */,
+				330EE048246AE2FC00FDD10B /* EventSenderManager.m */,
+				330EE047246AE2FC00FDD10B /* IosSampleIntgrateApp-Bridging-Header.h */,
+				330EE04A246AE31200FDD10B /* EventSenderManager.h */,
 			);
 			path = IosSampleIntgrateApp;
 			sourceTree = "<group>";
@@ -80,7 +87,6 @@
 				FC1CAB8CC117111FCD3EF7F1 /* Pods-IosSampleIntgrateApp.debug.xcconfig */,
 				3875291D57EBEC698787D258 /* Pods-IosSampleIntgrateApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -126,6 +132,7 @@
 				TargetAttributes = {
 					330EE02F246A80B100FDD10B = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -208,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				330EE038246A80B100FDD10B /* ViewController.swift in Sources */,
+				330EE049246AE2FC00FDD10B /* EventSenderManager.m in Sources */,
 				330EE034246A80B100FDD10B /* AppDelegate.swift in Sources */,
 				330EE036246A80B100FDD10B /* SceneDelegate.swift in Sources */,
 			);
@@ -354,6 +362,7 @@
 			baseConfigurationReference = FC1CAB8CC117111FCD3EF7F1 /* Pods-IosSampleIntgrateApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = IosSampleIntgrateApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -362,6 +371,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ran.zeller.IosSampleIntgrateApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IosSampleIntgrateApp/IosSampleIntgrateApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -372,6 +383,7 @@
 			baseConfigurationReference = 3875291D57EBEC698787D258 /* Pods-IosSampleIntgrateApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = IosSampleIntgrateApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -380,6 +392,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ran.zeller.IosSampleIntgrateApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IosSampleIntgrateApp/IosSampleIntgrateApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
