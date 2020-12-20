@@ -27,7 +27,7 @@ class ViewController: UIViewController {
             launchOptions: nil)
         let vc = UIViewController()
         vc.view = rootView
-        self.present(vc, animated: true, completion: nil)
+        self.show(vc, sender: nil)
     }
     
 }
