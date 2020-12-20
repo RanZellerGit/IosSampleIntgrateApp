@@ -1,3 +1,6 @@
 node_modules/
 ios/Pods/
 ios/build/
+
+package-lock.json
+ios/Podfile.lock
