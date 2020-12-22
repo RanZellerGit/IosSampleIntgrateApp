@@ -2,7 +2,7 @@ import React from 'react';
 import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 
 import { NativeModules, NativeEventEmitter } from 'react-native';
-const { EventSenderManager } = NativeModules;
+const { EventSenderManager, CallbackManager } = NativeModules;
 
 const eventSenderManagerEmitter = new NativeEventEmitter(EventSenderManager);
 
@@ -14,6 +14,7 @@ const subscription = eventSenderManagerEmitter.addListener(
       `param form native`,
       param
     );
+    CallbackManager.calledFromJS('data from JS');
   }
 );
 
